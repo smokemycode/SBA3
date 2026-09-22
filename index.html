@@ -5,27 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="flex flex-col justify-center items-center min-h-screen p-6 font-sans relative overflow-hidden">
+  <main class="flex flex-col w-full max-w-sm gap-4 relative">
 
-  You’ve used 815 GB of your storage
+    <!-- Top Card -->
+    <section class="bg-[#1D2C67] rounded-[0.625rem_5rem_0.625rem_0.625rem] p-10 ">
+      <div>
+        <img src="./images/logo.svg" alt="Fylo logo">
+      </div>
+      <div class="flex gap-4 pt-6">
+        <button type="button" class="w-12 h-12 flex items-center justify-center bg-[#0C122C] rounded-lg"><img src="./images/icon-document.svg" alt=""></button>
+        <button type="button" class="w-12 h-12 flex items-center justify-center bg-[#0C122C] rounded-lg"><img src="./images/icon-folder.svg" alt=""></button>
+        <button type="button" class="w-12 h-12 flex items-center justify-center bg-[#0C122C] rounded-lg"><img src="./images/icon-upload.svg" alt=""></button>
+      </div>
+    </section>
+    
+    <!-- Bottom Card -->
+    <section class="bg-[#1D2C67] rounded-xl p-8 pt-9 pb-12 text-center relative">
+      <p class="text-white text-sm mb-3">
+        You’ve used <span class="font-bold text-white">815 GB</span> of your storage
+      </p>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+      <div class="w-full h-5 bg-[#0c122c] rounded-full relative">
+        <div class="absolute inset-y-0 left-0 w-[81.5%] bg-gradient-to-r from-[#ffa399] to-[#ff4d97] rounded-full flex items-center justify-end pr-1">
+          <div class="w-3.5 h-3.5 bg-white rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="flex justify-between text-xs font-bold text-white mt-2">
+        <span>0 GB</span>
+        <span>1000 GB</span>
+      </div>
+
+      <div class="absolute left-1/2 -translate-x-1/2 -bottom-8 bg-white rounded-xl px-6 py-3 flex justify-center items-center gap-2 shadow-lg">
+        <span class="text-5xl font-bold text-[#0c122c]">185</span>
+        <span class="text-xs font-semibold text-[#8b95c9]">GB LEFT</span>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
